@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6BFD95E1-BF56-40ED-8F3F-DFE86464ED19"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D466837-C976-4F7F-B536-562FEF8E6EA6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DigDes/NetworkSession.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-fetchData:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB914F62-9768-4AD6-9097-0A819360A295"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DigDes/NetworkSession.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-fetchData:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DB914F62-9768-4AD6-9097-0A819360A295 - 1e47b6409dde557c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[NetworkSession fetchData]_block_invoke"
+                  moduleName = "DigDes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavinogradov/Desktop/DigDes/DigDes/NetworkSession.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "644">
+               </Location>
+               <Location
+                  uuid = "DB914F62-9768-4AD6-9097-0A819360A295 - 1e47b6409dde557c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__27-[NetworkSession fetchData]_block_invoke"
+                  moduleName = "DigDes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ilavinogradov/Desktop/DigDes/DigDes/NetworkSession.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "656">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
