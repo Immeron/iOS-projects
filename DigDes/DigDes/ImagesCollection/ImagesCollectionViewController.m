@@ -40,6 +40,11 @@ static NSString * const reuseIdentifier = @"imageCell";
     
     // Do any additional setup after loading the view.
 }
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
+
+    [self.collectionView.collectionViewLayout invalidateLayout];
+}
 
 /*
 #pragma mark - Navigation
