@@ -23,6 +23,7 @@ static NSString * const reuseIdentifier = @"imageCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.tag;
+    _cach = [[NSMutableDictionary alloc] initWithCapacity:50.0];
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -42,8 +43,8 @@ static NSString * const reuseIdentifier = @"imageCell";
 }
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
-
     [self.collectionView.collectionViewLayout invalidateLayout];
+    
 }
 
 /*
@@ -71,8 +72,10 @@ static NSString * const reuseIdentifier = @"imageCell";
     static NSString *CellIdentifier = @"imageCell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     NSString *stringURL = self.urls[indexPath.row];
-    if (self.cach[stringURL]!=nil){
-        cell.imageCell.image = self.cach[stringURL];
+    UIImage *image = [self.cach objectForKey:stringURL];
+    if (image){
+        cell.imageCell.image = image;
+        
     }else{
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
             
@@ -82,7 +85,8 @@ static NSString * const reuseIdentifier = @"imageCell";
                 NSLog(@"error! Data = nil");
                 return;
             }
-            self.cach[stringURL] = [UIImage imageWithData:data];
+            
+            [self.cach setObject:[UIImage imageWithData:data] forKey:stringURL];
             dispatch_async(dispatch_get_main_queue(), ^{
                 cell.imageCell.image = [UIImage imageWithData:data];
             });

@@ -9,4 +9,9 @@
 
 @implementation ImageCollectionViewCell
 
+- (void)prepareForReuse{
+    [super prepareForReuse];
+    self.imageCell.image = nil;
+}
+
 @end
