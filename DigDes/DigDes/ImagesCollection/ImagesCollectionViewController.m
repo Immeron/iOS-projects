@@ -12,7 +12,7 @@
 @interface ImagesCollectionViewController ()
 
 @property (strong, nonatomic) NSMutableArray *urls;
-
+@property (strong, nonatomic) NSMutableDictionary<NSString* ,UIImage*> *cach;
 
 @end
 
@@ -70,19 +70,25 @@ static NSString * const reuseIdentifier = @"imageCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"imageCell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        NSString *stringURL = self.urls[indexPath.row];
-        
-        NSData *data = [[NSData alloc]initWithContentsOfURL: [NSURL URLWithString: stringURL]];
-        if (data == nil){
-            NSLog(@"error! Data = nil");
-            return;
-        }
-        dispatch_async(dispatch_get_main_queue(), ^{
-            cell.imageCell.image = [UIImage imageWithData:data];
+    NSString *stringURL = self.urls[indexPath.row];
+    if (self.cach[stringURL]!=nil){
+        cell.imageCell.image = self.cach[stringURL];
+    }else{
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            
+            
+            NSData *data = [[NSData alloc]initWithContentsOfURL: [NSURL URLWithString: stringURL]];
+            if (data == nil){
+                NSLog(@"error! Data = nil");
+                return;
+            }
+            self.cach[stringURL] = [UIImage imageWithData:data];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.imageCell.image = [UIImage imageWithData:data];
+            });
         });
-    });
+    }
+    
     
     return cell;
 }
