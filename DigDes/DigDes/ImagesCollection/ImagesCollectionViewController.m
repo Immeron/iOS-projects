@@ -12,7 +12,7 @@
 @interface ImagesCollectionViewController ()
 
 @property (strong, nonatomic) NSMutableArray *urls;
-@property (strong, nonatomic) NSMutableDictionary<NSString* ,UIImage*> *cach;
+@property (strong, nonatomic) NSMutableDictionary<NSString* ,UIImage*> *cache;
 
 @end
 
@@ -23,23 +23,15 @@ static NSString * const reuseIdentifier = @"imageCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.tag;
-    _cach = [[NSMutableDictionary alloc] initWithCapacity:50.0];
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-//    [self.collectionView registerClass:[ImageCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    _cache = [[NSMutableDictionary alloc] initWithCapacity:50.0];
     NetworkSession *net = NetworkSession.new;
     self.urls = NSMutableArray.new;
     [net fetchImageURL:self.tag :^(NSMutableArray * _Nonnull arr){
         self.urls = arr;
-     //   NSLog(@"%@", self.urls);
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
         });
     }];
-    
-    // Do any additional setup after loading the view.
 }
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
@@ -72,21 +64,19 @@ static NSString * const reuseIdentifier = @"imageCell";
     static NSString *CellIdentifier = @"imageCell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     NSString *stringURL = self.urls[indexPath.row];
-    UIImage *image = [self.cach objectForKey:stringURL];
+    UIImage *image = [self.cache objectForKey:stringURL];
     if (image){
         cell.imageCell.image = image;
         
     }else{
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            
-            
             NSData *data = [[NSData alloc]initWithContentsOfURL: [NSURL URLWithString: stringURL]];
             if (data == nil){
                 NSLog(@"error! Data = nil");
                 return;
             }
             
-            [self.cach setObject:[UIImage imageWithData:data] forKey:stringURL];
+            [self.cache setObject:[UIImage imageWithData:data] forKey:stringURL];
             dispatch_async(dispatch_get_main_queue(), ^{
                 cell.imageCell.image = [UIImage imageWithData:data];
             });
