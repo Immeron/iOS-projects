@@ -21,7 +21,6 @@ class LikeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName:"FullTableViewCell", bundle: nil), forCellReuseIdentifier:"FullCell")
-
         
     }
 
