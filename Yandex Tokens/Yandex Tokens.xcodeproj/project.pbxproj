@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		814A332326263AE7002B2BCF /* SettingsURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A332226263AE7002B2BCF /* SettingsURL.swift */; };
+		814A332626263B38002B2BCF /* DataTaskURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A332526263B38002B2BCF /* DataTaskURLSession.swift */; };
+		814A332926263B4F002B2BCF /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A332826263B4F002B2BCF /* ParseJSON.swift */; };
+		814A332C26263C19002B2BCF /* TopSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A332B26263C19002B2BCF /* TopSymbol.swift */; };
+		814A333026263C49002B2BCF /* CompanyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814A332F26263C49002B2BCF /* CompanyProfile.swift */; };
+		815212C026077DB70021803C /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815212BF26077DB70021803C /* Networking.swift */; };
+		816CEC3226179C7D0020F471 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816CEC3126179C7D0020F471 /* PriceViewController.swift */; };
+		817D40F22610E98900C211AE /* FullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817D40F02610E98900C211AE /* FullTableViewCell.swift */; };
+		817D40F32610E98900C211AE /* FullTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817D40F12610E98900C211AE /* FullTableViewCell.xib */; };
+		81BEBB622612586B00CEFA84 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BEBB612612586B00CEFA84 /* Extensions.swift */; };
+		81FB4E642603EA89005D7D5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB4E632603EA89005D7D5D /* AppDelegate.swift */; };
+		81FB4E662603EA89005D7D5D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB4E652603EA89005D7D5D /* SceneDelegate.swift */; };
+		81FB4E6B2603EA89005D7D5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81FB4E692603EA89005D7D5D /* Main.storyboard */; };
+		81FB4E6D2603EA8F005D7D5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81FB4E6C2603EA8F005D7D5D /* Assets.xcassets */; };
+		81FB4E702603EA8F005D7D5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81FB4E6E2603EA8F005D7D5D /* LaunchScreen.storyboard */; };
+		81FB4E7A2603EC23005D7D5D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB4E792603EC23005D7D5D /* TableViewController.swift */; };
+		81FB4E7E2603F72B005D7D5D /* LikeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81FB4E7D2603F72B005D7D5D /* LikeTableViewController.swift */; };
+		B2D3F63859C464E9F72D8968 /* Pods_Yandex_Tokens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668CC25B4E4289D37ABE77E6 /* Pods_Yandex_Tokens.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C588405AB4928AF15B54FC1 /* Pods-Yandex Tokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Tokens.release.xcconfig"; path = "Target Support Files/Pods-Yandex Tokens/Pods-Yandex Tokens.release.xcconfig"; sourceTree = "<group>"; };
+		668CC25B4E4289D37ABE77E6 /* Pods_Yandex_Tokens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Yandex_Tokens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		814A332226263AE7002B2BCF /* SettingsURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsURL.swift; sourceTree = "<group>"; };
+		814A332526263B38002B2BCF /* DataTaskURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaskURLSession.swift; sourceTree = "<group>"; };
+		814A332826263B4F002B2BCF /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
+		814A332B26263C19002B2BCF /* TopSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopSymbol.swift; sourceTree = "<group>"; };
+		814A332F26263C49002B2BCF /* CompanyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyProfile.swift; sourceTree = "<group>"; };
+		815212BF26077DB70021803C /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		816CEC3126179C7D0020F471 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
+		817D40F02610E98900C211AE /* FullTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTableViewCell.swift; sourceTree = "<group>"; };
+		817D40F12610E98900C211AE /* FullTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullTableViewCell.xib; sourceTree = "<group>"; };
+		81BEBB612612586B00CEFA84 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		81FB4E602603EA89005D7D5D /* Yandex Tokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yandex Tokens.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81FB4E632603EA89005D7D5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		81FB4E652603EA89005D7D5D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		81FB4E6A2603EA89005D7D5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		81FB4E6C2603EA8F005D7D5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81FB4E6F2603EA8F005D7D5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		81FB4E712603EA8F005D7D5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81FB4E792603EC23005D7D5D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		81FB4E7D2603F72B005D7D5D /* LikeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeTableViewController.swift; sourceTree = "<group>"; };
+		A39F599EF6181FC5486FED7C /* Pods-Yandex Tokens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Yandex Tokens.debug.xcconfig"; path = "Target Support Files/Pods-Yandex Tokens/Pods-Yandex Tokens.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		81FB4E5D2603EA89005D7D5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2D3F63859C464E9F72D8968 /* Pods_Yandex_Tokens.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		814A332126263AC6002B2BCF /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				815212BF26077DB70021803C /* Networking.swift */,
+				814A332226263AE7002B2BCF /* SettingsURL.swift */,
+				814A332526263B38002B2BCF /* DataTaskURLSession.swift */,
+				814A332826263B4F002B2BCF /* ParseJSON.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		816CEC2A2615FEBE0020F471 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				817D40F12610E98900C211AE /* FullTableViewCell.xib */,
+				81FB4E692603EA89005D7D5D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		816CEC2B2615FEC90020F471 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				817D40F02610E98900C211AE /* FullTableViewCell.swift */,
+				81FB4E792603EC23005D7D5D /* TableViewController.swift */,
+				81FB4E7D2603F72B005D7D5D /* LikeTableViewController.swift */,
+				816CEC3126179C7D0020F471 /* PriceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		816CEC2D2615FEF00020F471 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				814A332126263AC6002B2BCF /* Networking */,
+				81BEBB612612586B00CEFA84 /* Extensions.swift */,
+				814A332B26263C19002B2BCF /* TopSymbol.swift */,
+				814A332F26263C49002B2BCF /* CompanyProfile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		816CEC2E2615FF4F0020F471 /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
+				81FB4E632603EA89005D7D5D /* AppDelegate.swift */,
+				81FB4E652603EA89005D7D5D /* SceneDelegate.swift */,
+				81FB4E6C2603EA8F005D7D5D /* Assets.xcassets */,
+				81FB4E6E2603EA8F005D7D5D /* LaunchScreen.storyboard */,
+				81FB4E712603EA8F005D7D5D /* Info.plist */,
+			);
+			path = SystemFiles;
+			sourceTree = "<group>";
+		};
+		81FB4E572603EA88005D7D5D = {
+			isa = PBXGroup;
+			children = (
+				81FB4E622603EA89005D7D5D /* Yandex Tokens */,
+				81FB4E612603EA89005D7D5D /* Products */,
+				976DC1093E8CE66034BDA415 /* Pods */,
+				F158EEFA411E1BCE390245F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		81FB4E612603EA89005D7D5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				81FB4E602603EA89005D7D5D /* Yandex Tokens.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		81FB4E622603EA89005D7D5D /* Yandex Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				816CEC2E2615FF4F0020F471 /* SystemFiles */,
+				816CEC2D2615FEF00020F471 /* Model */,
+				816CEC2A2615FEBE0020F471 /* View */,
+				816CEC2B2615FEC90020F471 /* Controller */,
+			);
+			path = "Yandex Tokens";
+			sourceTree = "<group>";
+		};
+		976DC1093E8CE66034BDA415 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A39F599EF6181FC5486FED7C /* Pods-Yandex Tokens.debug.xcconfig */,
+				0C588405AB4928AF15B54FC1 /* Pods-Yandex Tokens.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F158EEFA411E1BCE390245F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				668CC25B4E4289D37ABE77E6 /* Pods_Yandex_Tokens.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		81FB4E5F2603EA89005D7D5D /* Yandex Tokens */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81FB4E742603EA8F005D7D5D /* Build configuration list for PBXNativeTarget "Yandex Tokens" */;
+			buildPhases = (
+				E2E668EC30F37E3EABDD070B /* [CP] Check Pods Manifest.lock */,
+				81FB4E5C2603EA89005D7D5D /* Sources */,
+				81FB4E5D2603EA89005D7D5D /* Frameworks */,
+				81FB4E5E2603EA89005D7D5D /* Resources */,
+				63E441E84D1E0FA3D27F4828 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yandex Tokens";
+			productName = "Yandex Tokens";
+			productReference = 81FB4E602603EA89005D7D5D /* Yandex Tokens.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		81FB4E582603EA88005D7D5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					81FB4E5F2603EA89005D7D5D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 81FB4E5B2603EA88005D7D5D /* Build configuration list for PBXProject "Yandex Tokens" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 81FB4E572603EA88005D7D5D;
+			productRefGroup = 81FB4E612603EA89005D7D5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81FB4E5F2603EA89005D7D5D /* Yandex Tokens */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		81FB4E5E2603EA89005D7D5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				817D40F32610E98900C211AE /* FullTableViewCell.xib in Resources */,
+				81FB4E702603EA8F005D7D5D /* LaunchScreen.storyboard in Resources */,
+				81FB4E6D2603EA8F005D7D5D /* Assets.xcassets in Resources */,
+				81FB4E6B2603EA89005D7D5D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63E441E84D1E0FA3D27F4828 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yandex Tokens/Pods-Yandex Tokens-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Yandex Tokens/Pods-Yandex Tokens-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Yandex Tokens/Pods-Yandex Tokens-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2E668EC30F37E3EABDD070B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Yandex Tokens-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81FB4E5C2603EA89005D7D5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				817D40F22610E98900C211AE /* FullTableViewCell.swift in Sources */,
+				81FB4E7E2603F72B005D7D5D /* LikeTableViewController.swift in Sources */,
+				815212C026077DB70021803C /* Networking.swift in Sources */,
+				814A332626263B38002B2BCF /* DataTaskURLSession.swift in Sources */,
+				81BEBB622612586B00CEFA84 /* Extensions.swift in Sources */,
+				81FB4E642603EA89005D7D5D /* AppDelegate.swift in Sources */,
+				81FB4E7A2603EC23005D7D5D /* TableViewController.swift in Sources */,
+				816CEC3226179C7D0020F471 /* PriceViewController.swift in Sources */,
+				814A332926263B4F002B2BCF /* ParseJSON.swift in Sources */,
+				81FB4E662603EA89005D7D5D /* SceneDelegate.swift in Sources */,
+				814A333026263C49002B2BCF /* CompanyProfile.swift in Sources */,
+				814A332326263AE7002B2BCF /* SettingsURL.swift in Sources */,
+				814A332C26263C19002B2BCF /* TopSymbol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		81FB4E692603EA89005D7D5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81FB4E6A2603EA89005D7D5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		81FB4E6E2603EA8F005D7D5D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				81FB4E6F2603EA8F005D7D5D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		81FB4E722603EA8F005D7D5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		81FB4E732603EA8F005D7D5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		81FB4E752603EA8F005D7D5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39F599EF6181FC5486FED7C /* Pods-Yandex Tokens.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9UQ8H297N;
+				INFOPLIST_FILE = "Yandex Tokens/SystemFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Ilya.Yandex-Tokens";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		81FB4E762603EA8F005D7D5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C588405AB4928AF15B54FC1 /* Pods-Yandex Tokens.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9UQ8H297N;
+				INFOPLIST_FILE = "Yandex Tokens/SystemFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Ilya.Yandex-Tokens";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		81FB4E5B2603EA88005D7D5D /* Build configuration list for PBXProject "Yandex Tokens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81FB4E722603EA8F005D7D5D /* Debug */,
+				81FB4E732603EA8F005D7D5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		81FB4E742603EA8F005D7D5D /* Build configuration list for PBXNativeTarget "Yandex Tokens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81FB4E752603EA8F005D7D5D /* Debug */,
+				81FB4E762603EA8F005D7D5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 81FB4E582603EA88005D7D5D /* Project object */;
+}
