@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "1200px-1_singapore_city_skyline_dusk_panorama_2011.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
