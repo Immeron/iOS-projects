@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NetworkSession : NSObject
 -(void) fetchData: (void(^)(NSMutableArray* arr))completion;
--(void) fetchImageURL:(NSString*)tag :(void(^)(NSMutableArray* arr))completion;
+-(void) fetchImageURL:(NSString*)tag :(void(^)(NSMutableArray* arr_s, NSMutableArray* arr_l))completion;
 @end
 
 NS_ASSUME_NONNULL_END

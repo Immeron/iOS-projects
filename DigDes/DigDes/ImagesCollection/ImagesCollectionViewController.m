@@ -12,6 +12,7 @@
 @interface ImagesCollectionViewController ()
 
 @property (strong, nonatomic) NSMutableArray *urls;
+@property (strong, nonatomic) NSMutableArray *urll;
 @property (strong, nonatomic) NSMutableDictionary<NSString* ,UIImage*> *cache;
 
 @end
@@ -26,12 +27,15 @@ static NSString * const reuseIdentifier = @"imageCell";
     _cache = [[NSMutableDictionary alloc] initWithCapacity:50.0];
     NetworkSession *net = NetworkSession.new;
     self.urls = NSMutableArray.new;
-    [net fetchImageURL:self.tag :^(NSMutableArray * _Nonnull arr){
-        self.urls = arr;
+    self.urll = NSMutableArray.new;
+    [net fetchImageURL:self.tag :^(NSMutableArray * _Nonnull arr_s, NSMutableArray * _Nonnull arr_l) {
+        self.urls = arr_s;
+        self.urll = arr_l;
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.collectionView reloadData];
         });
     }];
+    
 }
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
     [super viewWillTransitionToSize:size withTransitionCoordinator:coordinator];
@@ -146,7 +150,7 @@ static NSString * const reuseIdentifier = @"imageCell";
         ImageDetailViewController *vc = (ImageDetailViewController*) segue.destinationViewController;
         NSIndexPath *index = sender;
         dispatch_async(dispatch_get_global_queue(0, 0), ^{
-            NSString *stringURL = self.urls[index.row];
+            NSString *stringURL = self.urll[index.row];
             
             NSData *data = [[NSData alloc]initWithContentsOfURL: [NSURL URLWithString: stringURL]];
             if (data == nil){

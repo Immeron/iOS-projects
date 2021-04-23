@@ -33,11 +33,11 @@
         }] resume];
 }
 
--(void) fetchImageURL:(NSString*)tag :(void(^)(NSMutableArray* arr))completion{
+-(void) fetchImageURL:(NSString*)tag :(void(^)(NSMutableArray* arr_s, NSMutableArray* arr_l))completion{
    // NSString *urlString = @"https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=eab35027935d7a4ac21f4e882a000446&tags=france&extras=url_l&per_page=10&page=1&format=json&nojsoncallback=1";
     NSString *urlString = @"https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=eab35027935d7a4ac21f4e882a000446&tags=";
     urlString = [urlString stringByAppendingString:tag];
-    urlString = [urlString stringByAppendingString:@"&extras=url_l&per_page=10&page=1&format=json&nojsoncallback=1"];
+    urlString = [urlString stringByAppendingString:@"&extras=url_s%2C+url_l&per_page=10&page=1&format=json&nojsoncallback=1"];
     NSURL *url = [NSURL URLWithString: urlString];
     [[NSURLSession.sharedSession dataTaskWithURL: url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSError *err;
@@ -46,18 +46,26 @@
             NSLog(@"%@", err);
             return;
         }
-        NSMutableArray *array = NSMutableArray.new;
+        NSMutableArray *array_s = NSMutableArray.new;
+        NSMutableArray *array_l = NSMutableArray.new;
         NSDictionary *dict = dataJSON[@"photos"];
         NSArray *arr = dict[@"photo"];
         for (NSDictionary *temp in arr){
-            NSString *url = temp[@"url_l"];
-            if(url==nil){
-                [array addObject:@"error"];
+            NSString *url_s = temp[@"url_s"];
+            NSString *url_l = temp[@"url_l"];
+            if(url_s==nil){
+                [array_s addObject:@"error"];
             }else{
-            [array addObject:url];
+                [array_s addObject:url_s];
+                
+            }
+            if(url_l == nil){
+                [array_l addObject:@"error"];
+            }else{
+                [array_l addObject:url_l];
             }
         }
-        completion(array);
+        completion(array_s, array_l);
         
         
         }] resume];
