@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		813B1749263316770078717C /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813B1748263316770078717C /* TextViewController.m */; };
 		816CEC42261B64450020F471 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 816CEC41261B64450020F471 /* AppDelegate.m */; };
 		816CEC45261B64450020F471 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 816CEC44261B64450020F471 /* SceneDelegate.m */; };
 		816CEC4B261B64450020F471 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816CEC49261B64450020F471 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		813B1747263316770078717C /* TextViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		813B1748263316770078717C /* TextViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		816CEC3D261B64450020F471 /* DigDes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigDes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		816CEC40261B64450020F471 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		816CEC41261B64450020F471 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		813B174B263316810078717C /* TextFieldView */ = {
+			isa = PBXGroup;
+			children = (
+				813B1747263316770078717C /* TextViewController.h */,
+				813B1748263316770078717C /* TextViewController.m */,
+			);
+			path = TextFieldView;
+			sourceTree = "<group>";
+		};
 		816CEC34261B64450020F471 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +89,7 @@
 				816CEC7D261D17420020F471 /* ImagesCollection */,
 				816CEC82261D17B20020F471 /* DetailView */,
 				816CEC83261D17EE0020F471 /* FirstView */,
+				813B174B263316810078717C /* TextFieldView */,
 				816CEC40261B64450020F471 /* AppDelegate.h */,
 				816CEC41261B64450020F471 /* AppDelegate.m */,
 				816CEC43261B64450020F471 /* SceneDelegate.h */,
@@ -205,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813B1749263316770078717C /* TextViewController.m in Sources */,
 				816CEC70261CA16D0020F471 /* ImagesCollectionViewController.m in Sources */,
 				816CEC42261B64450020F471 /* AppDelegate.m in Sources */,
 				816CEC53261B644C0020F471 /* main.m in Sources */,

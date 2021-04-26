@@ -23,18 +23,32 @@ static NSString * const reuseIdentifier = @"imageCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = self.tag;
     _cache = [[NSMutableDictionary alloc] initWithCapacity:50.0];
     NetworkSession *net = NetworkSession.new;
     self.urls = NSMutableArray.new;
     self.urll = NSMutableArray.new;
-    [net fetchImageURL:self.tag :^(NSMutableArray * _Nonnull arr_s, NSMutableArray * _Nonnull arr_l) {
-        self.urls = arr_s;
-        self.urll = arr_l;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.collectionView reloadData];
-        });
-    }];
+    if (self.tag!=nil){
+        self.title = self.tag;
+        [net fetchImageURL:self.tag :@"tags" :^(NSMutableArray * _Nonnull arr_s, NSMutableArray * _Nonnull arr_l) {
+            self.urls = arr_s;
+            self.urll = arr_l;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
+        }];
+    }
+    if (self.textTF!=nil){
+        self.title = self.textTF;
+        NSString *textInUrl = [self.textTF stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+        [net fetchImageURL:textInUrl :@"text" :^(NSMutableArray * _Nonnull arr_s, NSMutableArray * _Nonnull arr_l) {
+            self.urls = arr_s;
+            self.urll = arr_l;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.collectionView reloadData];
+            });
+        }];
+    }
+    
     
 }
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
@@ -43,17 +57,6 @@ static NSString * const reuseIdentifier = @"imageCell";
     
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-#pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
@@ -69,7 +72,10 @@ static NSString * const reuseIdentifier = @"imageCell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     NSString *stringURL = self.urls[indexPath.row];
     UIImage *image = [self.cache objectForKey:stringURL];
+    [cell.loadingIndicator startAnimating];
+    cell.loadingIndicator.hidesWhenStopped = true;
     if (image){
+        [cell.loadingIndicator stopAnimating];
         cell.imageCell.image = image;
         
     }else{
@@ -82,6 +88,7 @@ static NSString * const reuseIdentifier = @"imageCell";
             
             [self.cache setObject:[UIImage imageWithData:data] forKey:stringURL];
             dispatch_async(dispatch_get_main_queue(), ^{
+                [cell.loadingIndicator stopAnimating];
                 cell.imageCell.image = [UIImage imageWithData:data];
             });
         });
@@ -90,37 +97,6 @@ static NSString * const reuseIdentifier = @"imageCell";
     
     return cell;
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     int width = 20*3;
@@ -143,6 +119,7 @@ static NSString * const reuseIdentifier = @"imageCell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier:@"ToImageDetail" sender:indexPath];
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"ToImageDetail"]){

@@ -33,10 +33,11 @@
         }] resume];
 }
 
--(void) fetchImageURL:(NSString*)tag :(void(^)(NSMutableArray* arr_s, NSMutableArray* arr_l))completion{
-   // NSString *urlString = @"https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=eab35027935d7a4ac21f4e882a000446&tags=france&extras=url_l&per_page=10&page=1&format=json&nojsoncallback=1";
-    NSString *urlString = @"https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=eab35027935d7a4ac21f4e882a000446&tags=";
-    urlString = [urlString stringByAppendingString:tag];
+-(void) fetchImageURL: (NSString*)inputTextOrTag :(NSString*)tagsOrText :(void(^)(NSMutableArray* arr_s, NSMutableArray* arr_l))completion{
+    NSString *urlString = @"https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=eab35027935d7a4ac21f4e882a000446&";
+    urlString = [urlString stringByAppendingString:tagsOrText];
+    urlString = [urlString stringByAppendingString:@"="];
+    urlString = [urlString stringByAppendingString:inputTextOrTag];
     urlString = [urlString stringByAppendingString:@"&extras=url_s%2C+url_l&per_page=10&page=1&format=json&nojsoncallback=1"];
     NSURL *url = [NSURL URLWithString: urlString];
     [[NSURLSession.sharedSession dataTaskWithURL: url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -66,9 +67,9 @@
             }
         }
         completion(array_s, array_l);
-        
-        
         }] resume];
     
 }
+
 @end
+

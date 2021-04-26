@@ -32,7 +32,13 @@
                             <outlet property="delegate" destination="IyX-hU-G0V" id="hhW-zf-cOM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tags" id="W1o-Vh-UVu"/>
+                    <navigationItem key="navigationItem" title="Tags" id="W1o-Vh-UVu">
+                        <barButtonItem key="rightBarButtonItem" title="Serch" id="ujo-sF-Oub">
+                            <connections>
+                                <segue destination="3nH-DN-lAb" kind="show" id="MPj-ra-Zdi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="Ein-4l-etm" kind="show" identifier="SegueToCells" id="ffz-wo-kY4"/>
                     </connections>
@@ -40,6 +46,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqX-9K-fmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="550.72463768115949" y="87.723214285714278"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="PST-eg-lxm">
+            <objects>
+                <viewController id="3nH-DN-lAb" customClass="TextViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="luc-3t-yIJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jpk-HD-ZtO">
+                                <rect key="frame" x="148.5" y="460" width="117" height="30"/>
+                                <state key="normal" title="Serch"/>
+                                <connections>
+                                    <action selector="actionSerch:" destination="3nH-DN-lAb" eventType="touchUpInside" id="otA-x6-9xe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yID-8y-hKz">
+                                <rect key="frame" x="20" y="155" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xe2-0R-ezP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yID-8y-hKz" firstAttribute="leading" secondItem="Xe2-0R-ezP" secondAttribute="leading" constant="20" id="9Qz-fq-PRf"/>
+                            <constraint firstItem="yID-8y-hKz" firstAttribute="centerX" secondItem="Xe2-0R-ezP" secondAttribute="centerX" id="Dks-xh-25M"/>
+                            <constraint firstItem="Jpk-HD-ZtO" firstAttribute="centerY" secondItem="Xe2-0R-ezP" secondAttribute="centerY" id="YWc-Ym-Nu9"/>
+                            <constraint firstItem="Xe2-0R-ezP" firstAttribute="trailing" secondItem="yID-8y-hKz" secondAttribute="trailing" constant="20" id="dvZ-Qx-KdJ"/>
+                            <constraint firstItem="Jpk-HD-ZtO" firstAttribute="width" secondItem="luc-3t-yIJ" secondAttribute="height" multiplier="117:896" id="jT4-jr-TYt"/>
+                            <constraint firstItem="Jpk-HD-ZtO" firstAttribute="centerX" secondItem="Xe2-0R-ezP" secondAttribute="centerX" id="kAl-S4-7Ms"/>
+                            <constraint firstItem="yID-8y-hKz" firstAttribute="top" secondItem="Xe2-0R-ezP" secondAttribute="top" constant="67" id="ty0-OZ-7Ub"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3ir-r5-3IL"/>
+                    <connections>
+                        <outlet property="TextView" destination="yID-8y-hKz" id="xdI-xg-Hs9"/>
+                        <outlet property="serchButton" destination="Jpk-HD-ZtO" id="QGp-EW-cd3"/>
+                        <segue destination="Ein-4l-etm" kind="show" identifier="serchSegue" id="y8y-6t-6le"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDJ-Jf-43N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066.6666666666667" y="-648.21428571428567"/>
         </scene>
         <!--Images Collection View Controller-->
         <scene sceneID="AmZ-Ns-BPi">
@@ -63,9 +113,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AXK-CZ-ClR">
-                                            <rect key="frame" x="0.0" y="2" width="128" height="123.5"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AXK-CZ-ClR">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="G8N-aW-8jo">
+                                            <rect key="frame" x="54" y="54" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="color" systemColor="systemIndigoColor"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="AXK-CZ-ClR" firstAttribute="leading" secondItem="F2z-GK-YQ3" secondAttribute="leading" id="1gL-WP-SVg"/>
@@ -77,6 +132,7 @@
                                 <size key="customSize" width="128" height="128"/>
                                 <connections>
                                     <outlet property="imageCell" destination="AXK-CZ-ClR" id="G7f-OB-BZr"/>
+                                    <outlet property="loadingIndicator" destination="G8N-aW-8jo" id="37K-GK-VoK"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -143,10 +199,15 @@
             <point key="canvasLocation" x="-357.97101449275362" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="y8y-6t-6le"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

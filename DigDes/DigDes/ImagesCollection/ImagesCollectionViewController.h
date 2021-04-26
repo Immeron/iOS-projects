@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ImagesCollectionViewController : UICollectionViewController<UICollectionViewDelegateFlowLayout>
 @property (assign, nonatomic) NSString *tag;
+@property (nonatomic) NSString *textTF;
 @end
 
 NS_ASSUME_NONNULL_END
